@@ -1,0 +1,66 @@
+/* PC最大版輪播 1040一個單位 */
+.m-wrapper{
+    margin: 50px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+    width: 1040px;
+    height: 400px;
+}
+.m-innerwrapper{
+    position: absolute;
+    left:0;
+    top:0;
+    transition:all .5s ease-in-out;
+}
+.m-works-flex{
+    display:flex;
+}
+
+/* PC第二版輪播 520一個單位 */
+@media all and (max-width:1064px){
+    
+    .m-wrapper{
+        margin: 50px 0 80px 0;
+        position: relative;
+        overflow: hidden;
+        width: 520px;
+        height: 800px;
+    }
+    .m-innerwrapper{
+        position: absolute;
+        left:0px;
+        top:0;
+    }
+    .m-works-flex{
+        display:flex;
+        flex-wrap:wrap;
+        width: 520px;
+    }
+}
+
+/* PC第二版輪播 320一個單位 */
+@media all and (max-width:520px){
+    .m-wrapper{
+        margin: 50px 0 80px 0;
+        position: relative;
+        /* overflow: hidden; */
+        width: 320px;
+        height: 400px;
+    }
+    .m-innerwrapper{
+        position: absolute;
+        left:0px;
+        top:0;
+    }
+    .m-works-flex{
+        display:flex;
+        flex-wrap:wrap;
+        width: 320px;
+    }
+    .works-img{
+        width: 160px;
+        height: 100px;
+        overflow: hidden;
+        border:5px solid transparent
+    }
+}
