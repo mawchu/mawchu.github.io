@@ -848,6 +848,10 @@ a.contact-btn{
 @media all and (max-width:768px){
   .hamburger{
     transform: translateX(-40px);
+    width: 50px;
+    position: absolute;
+    right:-5px;
+    top:20px;
   }
 }
 @media all and (max-width:576px){
