@@ -710,8 +710,8 @@ a.contact-btn{
   .hamburger{
     width: 50px;
     position: absolute;
-    right:65px;
-    top:-28px;
+    right:5px;
+    top:20px;
   }
   .hamburger li{
     width: 100%;
