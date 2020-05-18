@@ -867,7 +867,7 @@ a.contact-btn{
   .hamburger{
     width: 50px;
     position: absolute;
-    right:-20px;
+    right:5px;
     top:20px;
   }
   .hamburger li{
