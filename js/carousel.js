@@ -174,6 +174,7 @@
             $(".logo-A").css("display","none")
             $(".logo-B").css("display","block")
             $(".logo").css("width","80px").css("transform","translateX(40px)")
+            $('.m-m-5').css('margin','50px 80px 0 80px')
 
             //  底線的位置
             $(".main-header div").css("transform","translateY(-35px)")
@@ -185,6 +186,8 @@
 
             $(".logo-A").css("display","block")
             $(".logo-B").css("display","none")
+            $('.m-m-5').css('margin','50px 80px 30px 80px')
+
             $(".headerdiv").removeClass("scrollfixed").removeClass("round").css("background","#fff")
             $(".logo").css("width","250px")
             $(".main-header div").css("transform","translateY(-40px)")
