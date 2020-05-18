@@ -21,7 +21,7 @@ console.log(worksOffset)
 
 $(".title-content-elements").removeClass("fadestart").addClass("fadein")
 
-$(".designer-content").height(textHeight+titleHeight+25)
+// $(".designer-content").height(textHeight+titleHeight+25)
 $(".content-wrapper").height(contentHeight+25)
 
 

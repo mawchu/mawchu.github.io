@@ -83,7 +83,9 @@ figure{
   border-radius: 0 0 100px 100px;
   border-bottom:3px dotted #dbbdbc;
 }
-
+.m-m-5{
+  margin: 50px 80px 30px 80px;
+}
 
 
 /* menu */
@@ -229,7 +231,7 @@ ul.drop-select li:hover{
   transition:.5s;
     width:1200px;
     height:680px;
-    background: pink;
+    background: transparent;
     border-radius: 400px 0 0 400px;
 }
 .slider-img{
@@ -762,7 +764,7 @@ a.contact-btn{
     transition:.5s;
     max-width:100%;
     height:600px;
-    background: pink;
+    background: transparent;
     border-radius: 400px 0 0 400px;
   }
   .slider-img{
@@ -843,7 +845,11 @@ a.contact-btn{
     transform: translateY(0px);
   }
 }
-
+@media all and (max-width:768px){
+  .hamburger{
+    transform: translateX(-40px);
+  }
+}
 @media all and (max-width:576px){
 
   .logo{
