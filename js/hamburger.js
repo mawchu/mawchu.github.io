@@ -51,8 +51,7 @@ $(".menu-list-show").on({
   },
   mouseleave:function(){
     $(this).css("display","none")
-  },
-
+  }
 })
 
 $(".menu-list-show li").on({
