@@ -667,7 +667,9 @@ a.contact-btn{
   width: calc(100% - 30px);
   margin-bottom: 10px;
 }
-
+.main-footer a:visited{
+  color:#fff;
+}
 @media all and (max-width:1567px){
     .title-content{
       z-index:10;
