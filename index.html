@@ -721,7 +721,7 @@
     <script>
       //手勢滑動
       let swipeIndex = 0;
-      $(function() {
+
       $(".slider-wrap").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -738,7 +738,7 @@
               $(".slider-img").css('left',0-swipeIndex*mainSliderWidth)
               $('.slider-bar').removeClass('active').eq(swipeIndex).addClass('active')
             }
-          }else{
+          }else if(direction=="right"){
             swipeIndex--;
             
             if(swipeIndex<0){
@@ -751,11 +751,11 @@
             }
           }
           
+          
         }
       });
 
-      //Set some options later
-      $(".slider-wrap").swipe( {fingers:2} );});
+
 
 
     </script>
