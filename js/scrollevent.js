@@ -84,7 +84,7 @@ $(window).on({
   
       }else if(scrollCurrent > worksOffset+808 && scrollCurrent<scrollTrack){
           $(".content-3").addClass("fixed")
-          $(".holder").css("height",'3000px')
+          $(".holder").css("height",'3250px')
           $('content-4').css('padding-top','840px')
       }else{
   
