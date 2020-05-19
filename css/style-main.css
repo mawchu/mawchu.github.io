@@ -1060,13 +1060,13 @@ a.contact-btn{
   .slider-wrap{
       transition:.05s;
       width:100%;
-      height:30vh;
+      height:35vh;
       background: pink;
       border-radius: 0;
   }
   .slider-img{
     width:300%;
-    height:30vh;
+    height:35vh;
     left:0px;
   }
 
