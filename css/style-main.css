@@ -1060,17 +1060,19 @@ a.contact-btn{
   .slider-wrap{
       transition:.05s;
       width:100%;
-      height:360px;
+      height:30vh;
       background: pink;
       border-radius: 0;
   }
   .slider-img{
     width:300%;
-    height:360px;
+    height:30vh;
     left:0px;
   }
 
-
+  .content-2{
+    margin-top: -50px;
+  }
   /* 設計師介紹 */
   .content-3{
     margin-top:40px;
