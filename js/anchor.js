@@ -1,3 +1,4 @@
+let nowWindowWidth = $(window).width()
 //錨點捲動緩衝
 
 $(".main-nav li a").click(function() {
@@ -52,10 +53,11 @@ $(".scroll-btn").click(function() {
 
   let href = $(this).find("a").attr("href")
     $("html, body").animate({
-        scrollTop: $(href).offset().top + "px"
+        scrollTop: $(href).offset().top -120 + "px"
     }, {
         duration:  $(href).offset().top / 3,
         easing: "swing"
     });
+
     return false;
 });

@@ -9,6 +9,7 @@ a, a:link, a:visited{
 h1,h3,li{
     font-family: 'Palanquin Dark', sans-serif;
     color:#4f3c3b;
+    margin-bottom:0;
 }
 h3{
     color:#b1a59e;
@@ -35,7 +36,9 @@ figure{
     padding-left:0;
     margin: 0 auto;
 }
-
+.m-flex-wrap{
+  flex-wrap: wrap;
+}
 .paddingTop{
   height: 220px;
 }
@@ -515,9 +518,9 @@ a.contact-btn{
   transition: all .5s cubic-bezier(.65,-0.22,.52,1.25);
 }
 .works-img-cover:hover{
-
   opacity: 1;
 }
+
 .remind-slogan{
   font-size: 16px;
   color:#fff;
@@ -669,7 +672,7 @@ a.contact-btn{
     .title-content{
       z-index:10;
       padding-left:150px;
-  }
+    }
 
     .designer-content{
         width: 30%;
@@ -681,14 +684,20 @@ a.contact-btn{
     .slider-wrap{
       transition:.5s;
         width:1000px;
-        height:680px;
+        height:75vh;
     }
     .slider-img{
         width:3000px;
-        height:680px;
+        height:75vh;
         left:0px;
         transition:.6s;
     }
+    .scroll-btn{
+      width: 150px;
+      margin:0 auto 0 auto;
+      z-index:10;
+      transform: translateY(-60px);
+  }
 }
 @media all and (max-width:1480px){
 
@@ -710,18 +719,21 @@ a.contact-btn{
       flex-shrink: 0;
       margin-top: 60px;
   }
+  .content-2{
+    margin-top:70px;
+  }
   .content-3{
     flex-wrap: wrap;
   }
   .designer-photo{
-    width:60%;
-    height: 800px;
+    width:50%;
+    height: 100vh;
     border-radius: 0 0  0 0;
     overflow:hidden;
   }
 
   .designer-content{
-      width: 40%;
+      width: 50%;
   }
   .designer-content-text{
     display:flex;
@@ -820,7 +832,6 @@ a.contact-btn{
     justify-content: center;
     flex-wrap: wrap;
   }
-
   .industry div figure{
     width:40%;
     flex-shrink: 1;
@@ -828,6 +839,14 @@ a.contact-btn{
     height: 240px;
     background: transparent;
   }
+  .m{
+    display:block;
+  }
+  .pc{
+    display:none;
+  }
+
+
 }
 @media all and (max-width:1050px){
   .title-content{
@@ -874,6 +893,12 @@ a.contact-btn{
     max-width: 600px;
     transform: translateY(0px);
   }
+  .designer-photo{
+    width:100%;
+    height: 40vh;
+    border-radius: 0 0  0 0;
+    overflow:hidden;
+  }
 }
 @media all and (max-width:768px){
   .hamburger{
@@ -882,17 +907,39 @@ a.contact-btn{
     right:30px;
     top:20px;
   }
-  .m{
-    display:block;
-  }
-  .pc{
-    display:none;
-  }
   .front{
     width: 25px;
     left:calc(50% - 12px);
     bottom:40%;
     animation-iteration-count: infinite;
+  }
+  .works-img-cover.mdevice{
+    opacity: 1;
+  }
+  
+  .scroll-btn{
+    width: 150px;
+    margin:-30px auto 0 auto;
+    z-index:10;
+    transform: translateY(0);
+  }
+  
+  .designer-content{
+    width: 100%;
+  }
+  .content-3{
+    padding-top:65px;
+    width: 100%;
+  }
+  .m-flex-wrap{
+    flex-wrap: nowrap;
+  }
+  .content-1{
+    margin-top: -60px;
+    color:#4f3c3b;
+  }
+  .content-4{
+    padding-top: 380px;
   }
 }
 @media all and (max-width:576px){
@@ -993,6 +1040,7 @@ a.contact-btn{
     top:42%;
     left:20%
   }
+
   .slider-bars{
       margin-left:0px;
       margin-top:20px;
@@ -1063,7 +1111,10 @@ a.contact-btn{
   }
 
   /* 作品牆 */
-  .content-4, .content-5,.content-6{
+  .content-4{
+    padding-top:340px;
+  } 
+  .content-5,.content-6{
     flex-direction: column;
     align-items: center;
     padding-top:40px;

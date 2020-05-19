@@ -1,23 +1,21 @@
 
 //設計師介紹文章分段滾動事件
-var menuHeight = $(".headerdiv").height()
-var contentHeight = $(".content-3").height()
-var textHeight = $(".text1").height()
+let menuHeight = $(".headerdiv").height()
+let contentHeight = $(".content-3").height()
+let textHeight = $(".text1").height()
 // console.log(textHeight)
-var titleHeight = $(".designer-content div").eq(0).height()
-var targetOffset = $(".designer-photo").offset().top;
-var currentWW = $(window).width()
-var scrollTrack = 5000;//總共滾動的長度
-var scrollDistance = scrollTrack-targetOffset
+let titleHeight = $(".designer-content div").eq(0).height()
+let targetOffset = $(".designer-photo").offset().top;
+let currentWW = $(window).width()
+let scrollTrack = 5000;//總共滾動的長度
+let scrollDistance = scrollTrack-targetOffset
 
-var worksOffset = $(".content-2").offset().top
-var contentOffset = $(".content-3").offset().top
+let worksOffset = $(".content-2").offset().top
+let contentOffset = $(".content-3").offset().top
+
+let targetHeight = $('.content-2').height()
+
 console.log(worksOffset)
-
-// var visualOffset = $(".content-4").offset().top
-// console.log(visualOffset)
-// var commercialOffset = $(".content-5").offset().top
-// var printingOffset = $(".content-6").offset().top
 
 $(".title-content-elements").removeClass("fadestart").addClass("fadein")
 
@@ -30,14 +28,16 @@ $(window).on({
   scroll:function(){
     let scrollCurrent = $(this).scrollTop()
     // console.log(scrollCurrent)
+
+    //大標題浮出
     if(scrollCurrent >　worksOffset){
       $(".title-content-elements").removeClass("fadein").addClass("fadestart")
     }else{
       $(".title-content-elements").removeClass("fadestart").addClass("fadein")
     }
 
-
-    if(scrollCurrent >= worksOffset-300 && scrollCurrent < contentOffset){
+    //主題設計牆浮出
+    if(scrollCurrent >= worksOffset-400 && scrollCurrent < contentOffset){
       $(".works").eq(0).removeClass("fadestart").addClass("fadein")
       setTimeout(
         function(){
@@ -51,27 +51,56 @@ $(window).on({
       $(".works").removeClass("fadein").addClass("fadestart")
     }
 
+    //桌機板滾動事件
+    if(currentWW>576){
+      if(scrollCurrent < targetOffset-menuHeight-80){
 
-    if(scrollCurrent < targetOffset-menuHeight-80){
+        $(".content-3").removeClass("fixed")
+        $(".holder").css("height",contentHeight+scrollDistance).css("padding-top",0)
+  
+      }else if(scrollCurrent > targetOffset-menuHeight-80 && scrollCurrent<scrollTrack){
+          $(".content-3").addClass("fixed")
+          $(".holder").css("height",contentHeight+scrollTrack)
+  
+      }else{
+  
+        $(".content-3").removeClass("fixed")
+        $(".holder").css("height",contentHeight+scrollDistance+150).css("padding-top",scrollDistance)
+  
+        // if(currentWW <=320 && scrollCurrent>targetOffset){
+        //   $(".holder").css("height",contentHeight+scrollDistance+30).css("padding-top",scrollDistance)
+        // }
+      }
 
-      $(".content-3").removeClass("fixed")
-      $(".holder").css("height",contentHeight+scrollDistance).css("padding-top",0)
-
-    }else if(scrollCurrent > targetOffset-menuHeight-80 && scrollCurrent<scrollTrack){
-
-      $(".content-3").addClass("fixed")
-      $(".holder").css("height",contentHeight+scrollTrack)
-
+    //手機板
     }else{
 
-      $(".content-3").removeClass("fixed")
-      $(".holder").css("height",contentHeight+scrollDistance+150).css("padding-top",scrollDistance)
 
-      if(currentWW <=320 && scrollCurrent>targetOffset){
-        $(".holder").css("height",contentHeight+scrollDistance+30).css("padding-top",scrollDistance)
+
+      if(scrollCurrent < targetOffset-menuHeight-80){
+
+        $(".content-3").removeClass("fixed")
+        $(".holder").css("height",contentHeight+scrollDistance).css("padding-top",0)
+  
+      }else if(scrollCurrent > worksOffset+808 && scrollCurrent<scrollTrack){
+          $(".content-3").addClass("fixed")
+          $(".holder").css("height",'3000px')
+          $('content-4').css('padding-top','840px')
+      }else{
+  
+        $(".content-3").removeClass("fixed")
+        $(".holder").css("height",contentHeight+scrollDistance+150).css("padding-top",scrollDistance)
+        $('content-4').css('padding-top','340px')
+
+  
+        if(currentWW <=320 && scrollCurrent>targetOffset){
+          $(".holder").css("height",contentHeight+scrollDistance+30).css("padding-top",scrollDistance)
+          $('content-4').css('padding-top','340px')
+
+        }
       }
     }
-
+    
     //三段式內容 320以上
     if(scrollCurrent<2800){
       $(".text1").css("display","block")
@@ -104,7 +133,7 @@ $(window).on({
       }else{
         $(".text1").css("display","none")
         $(".text2").css("display","none")
-        $(".text3").css("display","none")
+        $(".text3").css("display","block")
       }
     }
 
@@ -118,7 +147,7 @@ $(window).on({
       }else if(scrollCurrent>2800 && scrollCurrent<5000){
         $(".designer-content").css("display","block")
       }else{
-        $(".designer-content").css("display","none")
+        $(".designer-content").css("display","block")
         $(".designer-photo").css("display","none")
 
       }
