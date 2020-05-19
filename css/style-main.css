@@ -1043,8 +1043,9 @@ a.contact-btn{
 
   .slider-bars{
       margin-left:0px;
-      margin-top:20px;
+      margin-top:-10px;
       justify-content: center;
+      display: none;
   }
   .slider-bar{
       width: 60px;
@@ -1071,6 +1072,9 @@ a.contact-btn{
   /* 設計師介紹 */
   .content-3{
     margin-top:40px;
+  }
+  .m-flex-wrap{
+    flex-wrap: wrap;
   }
   .designer-content{
     /* padding:0 20px 0 20px; */
