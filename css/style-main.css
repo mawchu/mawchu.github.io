@@ -1251,6 +1251,13 @@ a.contact-btn{
 }
 
 @media all and (max-width:320px){
+  .title-content-elements h1{
+    font-size: 33px;
+    width:200px;
+  }
+  .title-content{
+    width:250px;
+  }
   .designer-photo{
     /* max-width:1200px; */
     width: 100%;
