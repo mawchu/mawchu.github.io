@@ -164,7 +164,7 @@ $(window).on({
       $('#commercial').removeClass("fadestart").addClass("fadein")
     }else if(scrollCurrent >= aboutOffset+scrollTrack+(worksCarouselHeight*2)-160){
       $('#print').removeClass("fadestart").addClass("fadein")
-    }else{
+    }else if(scrollCurrent < aboutOffset+scrollTrack-500){
       $('#visual').addClass("fadestart").removeClass("fadein")
       $('#commercial').addClass("fadestart").removeClass("fadein")
       $('#print').addClass("fadestart").removeClass("fadein")
