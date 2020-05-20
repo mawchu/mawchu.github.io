@@ -1,8 +1,8 @@
 
 //設計師介紹文章分段滾動事件
 let menuHeight = $(".headerdiv").height()
-let contentHeight = $(".content-3").height() //about offset
-// console.log(contentHeight)
+let aboutOffset = $(".content-3").height() //about offset
+// console.log(aboutOffset)
 let textHeight = $(".text1").height()
 
 let titleHeight = $(".designer-content div").eq(0).height()
@@ -16,13 +16,14 @@ let contentOffset = $(".content-3").offset().top
 let targetHeight = $('.content-2').height()
 
 let visualOffset = $('#visual').offset().top
+let worksCarouselHeight = $('#visual').height()
 console.log(visualOffset)
 
 
 $(".title-content-elements").removeClass("fadestart").addClass("fadein")
 
 // $(".designer-content").height(textHeight+titleHeight+25)
-$(".content-wrapper").height(contentHeight+25)
+$(".content-wrapper").height(aboutOffset+25)
 
 
 
@@ -58,19 +59,19 @@ $(window).on({
       if(scrollCurrent < targetOffset-menuHeight-80){
 
         $(".content-3").removeClass("fixed")
-        $(".holder").css("height",contentHeight+scrollDistance).css("padding-top",0)
+        $(".holder").css("height",aboutOffset+scrollDistance).css("padding-top",0)
   
       }else if(scrollCurrent > targetOffset-menuHeight-80 && scrollCurrent<scrollTrack){
           $(".content-3").addClass("fixed")
-          $(".holder").css("height",contentHeight+scrollTrack)
+          $(".holder").css("height",aboutOffset+scrollTrack)
   
       }else{
   
         $(".content-3").removeClass("fixed")
-        $(".holder").css("height",contentHeight+scrollDistance+150).css("padding-top",scrollDistance)
+        $(".holder").css("height",aboutOffset+scrollDistance+150).css("padding-top",scrollDistance)
   
         // if(currentWW <=320 && scrollCurrent>targetOffset){
-        //   $(".holder").css("height",contentHeight+scrollDistance+30).css("padding-top",scrollDistance)
+        //   $(".holder").css("height",aboutOffset+scrollDistance+30).css("padding-top",scrollDistance)
         // }
       }
 
@@ -82,7 +83,7 @@ $(window).on({
       if(scrollCurrent < targetOffset-menuHeight-80){
 
         $(".content-3").removeClass("fixed")
-        $(".holder").css("height",contentHeight+scrollDistance).css("padding-top",0)
+        $(".holder").css("height",aboutOffset+scrollDistance).css("padding-top",0)
   
       }else if(scrollCurrent > worksOffset+808 && scrollCurrent<scrollTrack){
           $(".content-3").addClass("fixed")
@@ -91,12 +92,12 @@ $(window).on({
       }else{
   
         $(".content-3").removeClass("fixed")
-        $(".holder").css("height",contentHeight+scrollDistance+150).css("padding-top",scrollDistance)
+        $(".holder").css("height",aboutOffset+scrollDistance+150).css("padding-top",scrollDistance)
         $('content-4').css('padding-top','340px')
 
   
         if(currentWW <=320 && scrollCurrent>targetOffset){
-          $(".holder").css("height",contentHeight+scrollDistance+30).css("padding-top",scrollDistance)
+          $(".holder").css("height",aboutOffset+scrollDistance+30).css("padding-top",scrollDistance)
           $('content-4').css('padding-top','340px')
 
         }
@@ -157,12 +158,17 @@ $(window).on({
     console.log(scrollCurrent)
 
     // 輪播牆的浮出
-    if(scrollCurrent >= contentHeight+scrollTrack-100 && scrollCurrent<6720){
+    if(scrollCurrent >= aboutOffset+scrollTrack-160 && scrollCurrent < aboutOffset+scrollTrack+worksCarouselHeight-160){
       $('#visual').removeClass("fadestart").addClass("fadein")
-    }else if(scrollCurrent>6720){
+    }else if(scrollCurrent >= aboutOffset+scrollTrack+worksCarouselHeight-160 && scrollCurrent < aboutOffset+scrollTrack+worksCarouselHeight*2-160){
       $('#commercial').removeClass("fadestart").addClass("fadein")
-    }else{
+    }else if(scrollCurrent >= aboutOffset+scrollTrack+(worksCarouselHeight*2)-160){
       $('#print').removeClass("fadestart").addClass("fadein")
+    }else{
+      $('#visual').addClass("fadestart").removeClass("fadein")
+      $('#commercial').addClass("fadestart").removeClass("fadein")
+      $('#print').addClass("fadestart").removeClass("fadein")
+
     }
   }
 })
