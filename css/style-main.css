@@ -361,8 +361,11 @@ ul.drop-select li:hover{
 .content-3{
   padding-top:100px;
   width: 100%;
+  transition: all .5s ease-in-out;
 }
-
+#visual{
+  transition: all .8s ease-in-out;
+}
 .fixed{
   position:fixed;
   left:0;
@@ -446,6 +449,12 @@ a.contact-btn{
 .content-4,.content-5,.content-6{
   padding-top:100px;
 }
+#commercial{
+  transition: all .8s ease-in-out;
+}
+#print{
+  transition: all .8s ease-in-out;
+}
 .works-wall-bg-block{
     height: 180px;
     width: 90%;
@@ -481,6 +490,12 @@ a.contact-btn{
     background: #dabdbd;
 }
 /* 作品牆輪播 */
+.movetoright{
+  transform: translateX(30px);
+}
+.movetoleft{
+  transform: translateX(-30px);
+}
 .left{
   left:0;
 }
@@ -929,6 +944,9 @@ a.contact-btn{
   .designer-content{
     width: 100%;
   }
+  .works-wall-bg-block {
+    width: 100%;
+  }
   .content-3{
     padding-top:65px;
     width: 100%;
@@ -1122,6 +1140,12 @@ a.contact-btn{
   .content-4{
     padding-top:340px;
   } 
+  .movetoright{
+    transform: translateX(0);
+  }
+  .movetoleft{
+    transform: translateX(0);
+  }
   .content-5,.content-6{
     flex-direction: column;
     align-items: center;

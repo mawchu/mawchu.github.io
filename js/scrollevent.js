@@ -1,9 +1,10 @@
 
 //設計師介紹文章分段滾動事件
 let menuHeight = $(".headerdiv").height()
-let contentHeight = $(".content-3").height()
+let contentHeight = $(".content-3").height() //about offset
+// console.log(contentHeight)
 let textHeight = $(".text1").height()
-// console.log(textHeight)
+
 let titleHeight = $(".designer-content div").eq(0).height()
 let targetOffset = $(".designer-photo").offset().top;
 let currentWW = $(window).width()
@@ -12,10 +13,11 @@ let scrollDistance = scrollTrack-targetOffset
 
 let worksOffset = $(".content-2").offset().top
 let contentOffset = $(".content-3").offset().top
-
 let targetHeight = $('.content-2').height()
 
-console.log(worksOffset)
+let visualOffset = $('#visual').offset().top
+console.log(visualOffset)
+
 
 $(".title-content-elements").removeClass("fadestart").addClass("fadein")
 
@@ -42,11 +44,11 @@ $(window).on({
       setTimeout(
         function(){
             $(".works").eq(1).removeClass("fadestart").addClass("fadein")
-        },150)
+        },80)
       setTimeout(
         function(){
             $(".works").eq(2).removeClass("fadestart").addClass("fadein")
-        },300)
+        },160)
     }else if(scrollCurrent >= contentOffset){
       $(".works").removeClass("fadein").addClass("fadestart")
     }
@@ -84,7 +86,7 @@ $(window).on({
   
       }else if(scrollCurrent > worksOffset+808 && scrollCurrent<scrollTrack){
           $(".content-3").addClass("fixed")
-          $(".holder").css("height",'3250px')
+          $(".holder").css("height",'3280px')
           $('content-4').css('padding-top','840px')
       }else{
   
@@ -152,11 +154,15 @@ $(window).on({
 
       }
     }
+    console.log(scrollCurrent)
 
-    // if(scrollCurrent >= visualOffset && scrollCurrent<commercialOffset){
-    //   $(".outer-wrapper").eq(0).removeClass("fadestart").addClass("fadein")
-    // }else{
-    //   $(".outer-wrapper").eq(0).removeClass("fadein").addClass("fadestart")
-    // }
+    // 輪播牆的浮出
+    if(scrollCurrent >= contentHeight+scrollTrack-100 && scrollCurrent<6720){
+      $('#visual').removeClass("fadestart").addClass("fadein")
+    }else if(scrollCurrent>6720){
+      $('#commercial').removeClass("fadestart").addClass("fadein")
+    }else{
+      $('#print').removeClass("fadestart").addClass("fadein")
+    }
   }
 })
