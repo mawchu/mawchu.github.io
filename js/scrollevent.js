@@ -77,9 +77,7 @@ $(window).on({
 
     //手機板
     }else{
-
-
-
+      
       if(scrollCurrent < targetOffset-menuHeight-80){
 
         $(".content-3").removeClass("fixed")

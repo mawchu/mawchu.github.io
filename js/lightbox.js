@@ -26,9 +26,7 @@ function show() {
 
 // 將圖檔名稱跑迴圈
 for(let photoNum=1; photoNum<25; photoNum++){
-
-
-
+  
     //圖片路徑 大張的
     $(".works-img").eq(photoNum-1).find("img").attr("data-src",`4/1/lightbox${photoNum}.jpg`)
     $(".works-img").eq(photoNum+groupNum-1).find("img").attr("data-src",`4/2/lightbox${photoNum}.jpg`)
