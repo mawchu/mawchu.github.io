@@ -12,5 +12,53 @@
   <lastmod>2022-07-31T11:56:07+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://mawchu.github.io/index.html</loc>
+  <lastmod>2022-07-31T11:56:07+00:00</lastmod>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/main-banner-1.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/main-banner-2.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/main-banner-3.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/work-pic1.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/work-pic2.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/images/designer.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox1.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox2.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox3.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox4.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox5.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox6.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox7.jpg</image:loc>
+  </image:image>
+  <image:image>
+      <image:loc>https://mawchu.github.io/4/1/lightbox8.jpg</image:loc>
+  </image:image>
+</url>
+      
+      
 
 </urlset>
